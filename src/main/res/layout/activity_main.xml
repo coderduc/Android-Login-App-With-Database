@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/unnamed">
+        <!-- App Logo -->
+        <LinearLayout
+            android:id="@+id/Layout_Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="match_parent"
+                android:layout_height="293dp"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+        <!-- Email Text View -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Layout_Logo"
+            android:layout_marginLeft="35dp"
+            android:id="@+id/Layout_EmailTextView">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <!-- Email Edit Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@+id/Layout_EmailTextView"
+            android:id="@+id/Layout_EmailEditText">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="youraddress123@gmail.com"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:id="@+id/userInput"/>
+        </LinearLayout>
+        <!-- Pass Text View -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Layout_EmailEditText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:id="@+id/Layout_PassTextView">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textColor="#ffffff"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <!-- Pass Edit Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_below="@+id/Layout_PassTextView"
+            android:id="@+id/Layout_PassEditText">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="*********"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:id="@+id/passwordInput"/>
+        </LinearLayout>
+        <!-- Login Button -->
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/Layout_PassEditText"
+            android:id="@+id/Layout_BtnLogin">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/botron_button"
+                android:text="Login"
+                android:textColor="#ffffff"
+                android:id="@+id/btn_Login"/>
+        </LinearLayout>
+        <!-- Sign Up Button -->
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:layout_below="@+id/Layout_BtnLogin"
+            android:id="@+id/Layout_btnSignUp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="No account yet? Create one"
+                android:id="@+id/btn_SignUp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/Layout_PassEditText"
+            android:id="@+id/Layout_btnForgotPws"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:text="Forgot Password?"
+                android:id="@+id/btnForgotPassword"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
